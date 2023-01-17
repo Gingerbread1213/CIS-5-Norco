@@ -12,8 +12,10 @@ using namespace std;
 
 int main(){
     double price;
-    double Tax;
-    double Tip;
+    double tax;
+    double tip;
+    const double TAX_RATE = 0.08;
+    const double TIP_RATE = 0.2;
     
     
     cout << "enter the bill total" << endl;
