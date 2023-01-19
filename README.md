@@ -1,10 +1,10 @@
 # CIS-5-Norco
 
-#include <iostream> 自动添加其他库  ios, streambuf, istream, ostream and/or iosfwd.<br />
-#include <iomanip> 整理文字顺序以及小数点<br />
-#include <cmath> 添加各种不同的数学运算<br />
-#include <ctime> 引用时间<br />
-#include <string> 添加字符串的定义<br />
+#include iostream 自动添加其他库  ios, streambuf, istream, ostream and/or iosfwd.<br />
+#include iomanip 整理文字顺序以及小数点<br />
+#include cmath 添加各种不同的数学运算<br />
+#include ctime 引用时间<br />
+#include string 添加字符串的定义<br />
 
 
 
