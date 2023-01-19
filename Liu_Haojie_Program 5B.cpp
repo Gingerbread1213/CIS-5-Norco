@@ -1,313 +1,72 @@
-// Haojie Liu
+//
+//  Rabbit.cpp
+//  Project 1
+//
+//  Created by 刘豪杰 on 1/17/23.
+//
 
-// CIS-5 Online
-
-// March 21
-
-// Program 5B: Restaurant Menu
-
-
+#include "Rabbit.h"
+#include "Arena.h"
+#include "globals.h"
 #include <iostream>
-#include <cmath>
-#include <iomanip>
-#include <string>
-
-
+#include <cstdlib>
 using namespace std;
 
-int main(){
-    
-    int choice;
-    string Y_N;
-    
-    string name = "China Town";
-    string slogan = "WE COOK YOUR BEST FOOD!!!";
-    bool Add_on = false;
-    float total = 0.0;
-    const string ITEM1 = "noodle";
-    const string ITEM2 = "rice";
-    const string ITEM3 = "soup";
-    const string ITEM4 = "bread";
-    
-    const float COST_ITEM1 = 11;
-    const float COST_ITEM2 = 12.5;
-    const float COST_ITEM3 = 9.25;
-    const float COST_ITEM4 = 9;
-
-    const float COST_ADD_ON = 5;
-
-    
-    cout << "Welcome to " << name << "\n" << slogan << endl;
-    cout << "Here is the recipe: " << endl;
-    cout << "1." << left << setw(7) << ITEM1 << right << setw(7) << COST_ITEM1 << "$" << "\n";
-    cout << "2." << left << setw(7) << ITEM2 << right << setw(7) << COST_ITEM2 << "$" << "\n";
-    cout << "3." << left << setw(7) << ITEM3 << right << setw(7) << COST_ITEM3 << "$" << "\n";
-    cout << "4." << left << setw(7) << ITEM4 << right << setw(7) << COST_ITEM4 << "$" << "\n";
-    
-    cin >> choice;
-    
-    switch (choice){
-
-        case 1:
-            total = COST_ITEM1;
-            cout << "each Add on is " << COST_ADD_ON << "$" <<endl;
-            cout << "Do you want green onion? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            }
-            
-            cout << "Do you want garlic? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            }
-            
-            cout << "Do you want tofu? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-
-            }
-            break;
-            
-        case 2:
-            total = COST_ITEM2;
-            cout << "each Add on is " << COST_ADD_ON << "$" <<endl;
-            cout << "Do you want beans? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            }
-            
-            cout << "Do you want chicken? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            }
-            
-            cout << "Do you want tofu? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-
-            }
-            break;
-            
-        case 3:
-            total = COST_ITEM3;
-            cout << "each Add on is " << COST_ADD_ON << "$" <<endl;
-            cout << "Do you want green onion? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            }
-            
-            cout << "Do you want shrimp? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            }
-            
-            cout << "Do you want mushroom? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-
-               
-            }
-            break;
-            
-        case 4:
-            total = COST_ITEM4;
-            cout << "each Add on is " << COST_ADD_ON << "$" <<endl;
-            cout << "Do you want green onion? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            }
-            
-            cout << "Do you want garlic? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            }
-            
-            cout << "Do you want tofu? \n";
-            cout << "Y or N \n";
-            cin >> Y_N;
-            if (Y_N == "Y" || Y_N == "y"){
-                Add_on = true;
-            }
-            else if (Y_N == "N" || Y_N == "n"){
-                Add_on = false;
-            }
-            else{
-                cout << "please choose Y or N"<< endl;
-                return 0;
-            }
-            
-            
-            if (Add_on == true){
-                total = total + COST_ADD_ON;
-            
-            
-            }
-            break;
-            
-        default:
-            cout << "Thank you for visiting China Town, WE COOK YOUR BEST FOOD!!!\n";
-            cout << "Good Bye" << endl;
-            break;
+Rabbit::Rabbit(Arena* ap, int r, int c)
+{
+    if (ap == nullptr)
+    {
+        cout << "***** A rabbit must be created in some Arena!" << endl;
+        exit(1);
     }
-    
-    cout << "Thank you for ordering in China Town, WE COOK YOUR BEST FOOD!!!" << endl;
-    cout << "Here is your total: \n" << total << "$" << endl;
-    
-    
-    return 0;
+    if (r < 1  ||  r > ap->rows()  ||  c < 1  ||  c > ap->cols())
+    {
+        cout << "***** Rabbit created with invalid coordinates (" << r << ","
+             << c << ")!" << endl;
+        exit(1);
+    }
+    m_arena = ap;
+    m_row = r;
+    m_col = c;
+    m_health = INITIAL_RABBIT_HEALTH;
+    m_idleTurnsRemaining = 0;
+}
+//form a rabbit
+
+
+int Rabbit::row() const
+{
+    return m_row;
 }
 
+int Rabbit::col() const
+{
+    return m_col;
+}
+
+bool Rabbit::isDead() const
+{
+    return m_health == 0;
+}
+
+void Rabbit::move()
+{
+    if (m_idleTurnsRemaining > 0)
+    {
+        m_idleTurnsRemaining--;
+        return;
+    }
+
+      // Attempt to move in a random direction; if can't move, we don't move
+    if (attemptMove(*m_arena, randInt(0, NUMDIRS-1), m_row, m_col))
+    {
+        if (m_arena->getCellStatus(m_row, m_col) == HAS_POISON)
+        {
+            m_arena->setCellStatus(m_row, m_col, EMPTY);
+            m_health--;
+        }
+    }
+
+    if (m_health < INITIAL_RABBIT_HEALTH)
+        m_idleTurnsRemaining = POISONED_IDLE_TIME;
+}
