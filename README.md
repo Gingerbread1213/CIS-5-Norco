@@ -1,5 +1,30 @@
 # CIS-5-Norco
 
+loop:<br />
+#for loop<br />
+for(int i=0; i<x; i++){<br />
+<br />
+}<br />
+
+#while loop<br />
+while(){<br />
+<br />
+}<br />
+
+#do while<br />
+do{<br />
+<br />
+}<br />
+while()<br />
+<br />
+#if loop<br />
+if(){<br />
+}<br />
+else if(){<br />
+}<br />
+else{<br />
+}<br />
+
 #include iostream 自动添加其他库  ios, streambuf, istream, ostream and/or iosfwd.<br />
 #include iomanip 整理文字顺序以及小数点<br />
 #include cmath 添加各种不同的数学运算<br />
