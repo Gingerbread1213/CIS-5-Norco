@@ -311,8 +311,6 @@ void bread(float &total){
         cout << "please choose Y or N"<< endl;
         return;
     }
-
-    
     
     return;
 }
