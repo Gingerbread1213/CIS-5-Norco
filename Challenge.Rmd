@@ -1,0 +1,12 @@
+---
+title: "CS probelm"
+output: pdf_document
+date: "2023-02-07"
+---
+
+**The Fibonacci sequence is the series of numbers where each number is the sum of the two preceding numbers.**\newline 
+**For example 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610**
+
+Write a program in c++ that generates the sequence above
+
+Note: $x_n=(x_n-1)+(x_n-2)$
