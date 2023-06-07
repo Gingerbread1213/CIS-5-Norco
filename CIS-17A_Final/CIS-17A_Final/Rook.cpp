@@ -1,131 +1,114 @@
 //
-//  Bishop.cpp
+//  Rook.cpp
 //  CIS-17A_Final
 //
 //  Created by 刘豪杰 on 6/6/23.
 //
 
-#include "Bishop.h"
+#include "Rook.h"
 
-Bishop::Bishop(ChessBoard* board, Color color) : ChessPiece(board, color)
+
+Rook::Rook(ChessBoard* board, Color color) : ChessPiece(board, color)
 {
     
 }
 
-Bishop::~Bishop(){
+Rook::~Rook(){
     
 }
 
-string Bishop::toString(){
+string Rook::toString(){
     
     if(color==BLACK){
-        return "\u265D";
+        return "\u265C";
     }else {
-        return "\u2657";
+        return "\u2656";
     }
-
 }
 
-vector<string>* Bishop::legalMoves(){
+vector<string>* Rook::legalMoves(){
     
     vector<string>* move = new vector<string>();
-    int n_row = row;
     int n_col = column;
+    int n_row = row;
     Position n_pos;
     n_pos.row=n_row;
     n_pos.column=n_col;
     
-    if(color == BLACK){
+    if(color==BLACK){
         
-        // go left down
+        // front
         
-        while(n_col>0 && n_row>0){
+        while(n_row>0){
             n_pos.row=n_row-1;
+            if(board->getPiece(n_pos) == NULL){
+                n_row-=1;
+                move->push_back(toCoorString(n_col,n_row));
+            }else{
+                n_row-=1;
+                move->push_back(toCoorString(n_col,n_row));
+                n_row = 0;
+            }
+        }
+        
+        n_pos.row=n_row;
+        
+        // back
+        
+        while(n_row<8){
+            n_pos.row=n_row+1;
+            if(board->getPiece(n_pos) == NULL){
+                n_row+=1;
+                move->push_back(toCoorString(n_col,n_row));
+            }else{
+                n_row+=1;
+                move->push_back(toCoorString(n_col,n_row));
+                n_row = 8;
+            }
+        }
+        
+        n_pos.row=n_row;
+        
+        // left
+        
+        while(n_col>0){
             n_pos.column=n_col-1;
             if(board->getPiece(n_pos) == NULL){
                 n_col-=1;
-                n_row-=1;
                 move->push_back(toCoorString(n_col,n_row));
             }else{
                 n_col-=1;
-                n_row-=1;
                 move->push_back(toCoorString(n_col,n_row));
-                n_col=0;
-                n_row=0;
+                n_col = 0;
             }
         }
         
-        n_row = row;
-        n_col = column;
-               
-        // go right down
+        n_pos.column=n_col;
         
-        while(n_col<8 && n_row>0){
-            
-            n_pos.row=n_row-1;
+        // right
+        
+        while(n_col<8){
             n_pos.column=n_col+1;
-            
             if(board->getPiece(n_pos) == NULL){
                 n_col+=1;
-                n_row-=1;
                 move->push_back(toCoorString(n_col,n_row));
             }else{
                 n_col+=1;
-                n_row-=1;
                 move->push_back(toCoorString(n_col,n_row));
-                n_col= 8;
-                n_row= 0;
+                n_col = 8;
             }
         }
         
-        // go left up
+        n_pos.column=n_col;
         
-        while(n_col>0 && n_row<8){
-        
-            
-            n_pos.row=n_row+1;
-            n_pos.column=n_col-1;
-            
-            if(board->getPiece(n_pos) == NULL){
-                n_col-=1;
-                n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
-            }else{
-                n_col-=1;
-                n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
-                n_col= 0;
-                n_row= 8;
-            }
-        }
-        
-        // go right up
-        
-        while (n_col<8 && n_row<8) {
-
-            n_pos.row=n_row+1;
-            n_pos.column=n_col+1;
-            
-            if(board->getPiece(n_pos) == NULL){
-                n_col+=1;
-                n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
-            }else{
-                n_col+=1;
-                n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
-                n_col= 8;
-                n_row= 8;
-            }
-        }
     }
     
-    if (color==WHITE){
+    
+    if(color == WHITE){
         
         // your code
         
     }
-    
     
     return move;
 }

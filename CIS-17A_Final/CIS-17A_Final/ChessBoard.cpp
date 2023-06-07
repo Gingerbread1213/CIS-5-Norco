@@ -33,6 +33,7 @@ void ChessBoard::initialize(){
     
     
     
+    
 }
 
 ChessPiece* ChessBoard::getPiece(Position position){

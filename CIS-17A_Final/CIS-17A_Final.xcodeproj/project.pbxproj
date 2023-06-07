@@ -12,6 +12,10 @@
 		C373E70F2A2FBE4C00347729 /* Bishop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E70D2A2FBE4C00347729 /* Bishop.cpp */; };
 		C373E7112A2FBEB700347729 /* ChessPiece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E7102A2FBEB700347729 /* ChessPiece.cpp */; };
 		C373E7142A30363F00347729 /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E7122A30363F00347729 /* Pawn.cpp */; };
+		C3A6FEAA2A3060FE000A9C98 /* Rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3A6FEA82A3060FE000A9C98 /* Rook.cpp */; };
+		C3A6FEAD2A307924000A9C98 /* Queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3A6FEAB2A307924000A9C98 /* Queen.cpp */; };
+		C3A6FEB02A3079D2000A9C98 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3A6FEAE2A3079D2000A9C98 /* King.cpp */; };
+		C3A6FEB32A307A58000A9C98 /* Knight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3A6FEB12A307A58000A9C98 /* Knight.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +40,14 @@
 		C373E7102A2FBEB700347729 /* ChessPiece.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChessPiece.cpp; sourceTree = "<group>"; };
 		C373E7122A30363F00347729 /* Pawn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pawn.cpp; sourceTree = "<group>"; };
 		C373E7132A30363F00347729 /* Pawn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pawn.h; sourceTree = "<group>"; };
+		C3A6FEA82A3060FE000A9C98 /* Rook.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rook.cpp; sourceTree = "<group>"; };
+		C3A6FEA92A3060FE000A9C98 /* Rook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rook.h; sourceTree = "<group>"; };
+		C3A6FEAB2A307924000A9C98 /* Queen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Queen.cpp; sourceTree = "<group>"; };
+		C3A6FEAC2A307924000A9C98 /* Queen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queen.h; sourceTree = "<group>"; };
+		C3A6FEAE2A3079D2000A9C98 /* King.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = SOURCE_ROOT; };
+		C3A6FEAF2A3079D2000A9C98 /* King.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = King.h; sourceTree = SOURCE_ROOT; };
+		C3A6FEB12A307A58000A9C98 /* Knight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Knight.cpp; sourceTree = SOURCE_ROOT; };
+		C3A6FEB22A307A58000A9C98 /* Knight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,10 @@
 		C373E7012A2D2B6C00347729 /* CIS-17A_Final */ = {
 			isa = PBXGroup;
 			children = (
+				C3A6FEB12A307A58000A9C98 /* Knight.cpp */,
+				C3A6FEB22A307A58000A9C98 /* Knight.h */,
+				C3A6FEAE2A3079D2000A9C98 /* King.cpp */,
+				C3A6FEAF2A3079D2000A9C98 /* King.h */,
 				C373E7022A2D2B6C00347729 /* main.cpp */,
 				C373E7092A2D3A3F00347729 /* ChessBoard.cpp */,
 				C373E7102A2FBEB700347729 /* ChessPiece.cpp */,
@@ -76,6 +92,10 @@
 				C373E70C2A2FBE3700347729 /* Bishop.h */,
 				C373E7122A30363F00347729 /* Pawn.cpp */,
 				C373E7132A30363F00347729 /* Pawn.h */,
+				C3A6FEA82A3060FE000A9C98 /* Rook.cpp */,
+				C3A6FEA92A3060FE000A9C98 /* Rook.h */,
+				C3A6FEAB2A307924000A9C98 /* Queen.cpp */,
+				C3A6FEAC2A307924000A9C98 /* Queen.h */,
 			);
 			path = "CIS-17A_Final";
 			sourceTree = "<group>";
@@ -137,11 +157,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A6FEAA2A3060FE000A9C98 /* Rook.cpp in Sources */,
 				C373E7032A2D2B6C00347729 /* main.cpp in Sources */,
+				C3A6FEB02A3079D2000A9C98 /* King.cpp in Sources */,
 				C373E70F2A2FBE4C00347729 /* Bishop.cpp in Sources */,
 				C373E70B2A2D3A3F00347729 /* ChessBoard.cpp in Sources */,
+				C3A6FEB32A307A58000A9C98 /* Knight.cpp in Sources */,
 				C373E7112A2FBEB700347729 /* ChessPiece.cpp in Sources */,
 				C373E7142A30363F00347729 /* Pawn.cpp in Sources */,
+				C3A6FEAD2A307924000A9C98 /* Queen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

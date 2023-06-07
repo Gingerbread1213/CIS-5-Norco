@@ -1,29 +1,26 @@
 //
-//  Bishop.h
+//  Rook.hpp
 //  CIS-17A_Final
 //
 //  Created by 刘豪杰 on 6/6/23.
 //
 
-#ifndef Bishop_h
-#define Bishop_h
-
+#ifndef Rook_hpp
+#define Rook_hpp
 
 #include <stdio.h>
 #include <vector>
 #include <string>
 #include "ChessBoard.h"
 
-class Bishop : public ChessPiece
+class Rook : public ChessPiece
 {
     
 public:
-    Bishop(ChessBoard* board, Color color);
-    virtual ~Bishop();
+    Rook(ChessBoard* board, Color color);
+    virtual ~Rook();
     virtual string toString();
     virtual vector<string>* legalMoves();
 };
 
-
-
-#endif /* Bishop_h */
+#endif /* Rook_hpp */
