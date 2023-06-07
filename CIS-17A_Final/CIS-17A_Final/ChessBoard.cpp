@@ -12,42 +12,46 @@ using namespace std;
 
 
 ChessBoard::ChessBoard(){
-    
-    
+    for(int i =0; i<SIZE;i++){
+        for(int j=0; j<SIZE;j++){
+            board[i][j] = NULL;
+        }
+    }
 }
 
 
 ChessBoard::~ChessBoard(){
     
-    
-    
+    for(int i =0; i<SIZE;i++){
+        for(int j=0; j<SIZE;j++){
+            delete board[i][j];
+        }
+    }
 }
 
 void ChessBoard::initialize(){
+    
     
     
 }
 
 ChessPiece* ChessBoard::getPiece(Position position){
     
-    
-    
-    return a;
+    return board[position.row][position.column];
+
 }
 
 bool ChessBoard::placePiece(ChessPiece* piece, Position position){
+    
     
     return false;
 }
 
 bool ChessBoard::move(Position fromPosition, Position toPosition){
     
+    
     return false;
 }
-
-
-
-
 
 
 

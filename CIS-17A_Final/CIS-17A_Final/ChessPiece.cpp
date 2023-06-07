@@ -13,10 +13,14 @@
 using namespace std;
 
 
-ChessPiece::ChessPiece(ChessBoard board, Color color){
+ChessPiece::ChessPiece(ChessBoard *board, Color color){
     
     this->board = board;
     this->color = color;
+    
+}
+
+ChessPiece::~ChessPiece(){
     
 }
 
@@ -39,20 +43,20 @@ void ChessPiece::setColumn(int newCol){
     return;
 }
 
-ChessPiece::Color ChessPiece::getColor(){
+Color ChessPiece::getColor(){
     return color;
 }
 
 string ChessPiece::getPosition(){
-    return toString();
+    return toCoorString(column, row);
 }
 
 
-string ChessPiece::toString(){
+string ChessPiece::toCoorString(int n_col, int n_row){
     
     string pos;
-    pos = column+'a';
-    pos = pos+to_string(row+1);
+    pos = n_col+'a';
+    pos = pos+to_string(n_row+1);
     
     return pos;
 }
@@ -64,6 +68,5 @@ void ChessPiece::setPosition(Position position){
     
     return;
 }
-
 
 

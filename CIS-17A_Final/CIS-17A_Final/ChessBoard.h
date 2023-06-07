@@ -36,7 +36,8 @@ private:
 public:
     
     ChessBoard(); // create board
-    ~ChessBoard(); // delete board
+    
+    virtual ~ChessBoard(); // delete board
     
     void initialize(); //place pieces
     
@@ -48,25 +49,26 @@ public:
 
     string toString(); // debug
     
+    
 };
 
 
-
+enum Color {WHITE, BLACK};
 
 
 class ChessPiece{
   
-    enum Color {WHITE, BLACK};
     
 protected:
-    ChessBoard board;
+    ChessBoard* board;
     int row;
     int column;
     Color color;
     
 public:
-    ChessPiece(ChessBoard board, Color color); // create chess piece
     
+    ChessPiece(ChessBoard* board, Color color); // create chess piece
+    ~ChessPiece();
     int getRow(); // return row
     int getColumn(); // return column
     void setRow(int newRow); // set a row
@@ -74,8 +76,7 @@ public:
     Color getColor(); // return color
     string getPosition();
     void setPosition(Position position);
-    virtual string toString();
-    
+    virtual string toCoorString(int n_col, int n_row);
 };
 
 

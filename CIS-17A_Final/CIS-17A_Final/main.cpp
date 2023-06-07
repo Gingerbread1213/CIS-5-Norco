@@ -1,23 +1,28 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "ChessBoard.h"
 
 using namespace std;
 
+int ok();
 
 
 int main(){
     
-    int row=1;
-    int col=2;
+    int *a[3][3];
     
-    string pos;
-    pos = col+'a';
-    pos = pos+to_string(row+1) ;
-
+    int x = 1;
     
-    cout << pos << endl;
-    cout << 1+'a';
+    
+    a[0][0]=&x;
+    
+    cout << *a[0][0] <<endl;
+    
+    x = 2;
+    cout << *a[0][0] <<endl;
+    
+    
     
     return 0;
 }
@@ -31,3 +36,7 @@ int main(){
 
 
 
+int ok (){
+    
+    return 0;
+}

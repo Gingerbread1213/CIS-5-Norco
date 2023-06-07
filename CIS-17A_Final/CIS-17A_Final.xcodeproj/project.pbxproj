@@ -11,6 +11,7 @@
 		C373E70B2A2D3A3F00347729 /* ChessBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E7092A2D3A3F00347729 /* ChessBoard.cpp */; };
 		C373E70F2A2FBE4C00347729 /* Bishop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E70D2A2FBE4C00347729 /* Bishop.cpp */; };
 		C373E7112A2FBEB700347729 /* ChessPiece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E7102A2FBEB700347729 /* ChessPiece.cpp */; };
+		C373E7142A30363F00347729 /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E7122A30363F00347729 /* Pawn.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,8 @@
 		C373E70C2A2FBE3700347729 /* Bishop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bishop.h; sourceTree = "<group>"; };
 		C373E70D2A2FBE4C00347729 /* Bishop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bishop.cpp; sourceTree = "<group>"; };
 		C373E7102A2FBEB700347729 /* ChessPiece.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChessPiece.cpp; sourceTree = "<group>"; };
+		C373E7122A30363F00347729 /* Pawn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pawn.cpp; sourceTree = "<group>"; };
+		C373E7132A30363F00347729 /* Pawn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pawn.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				C373E70A2A2D3A3F00347729 /* ChessBoard.h */,
 				C373E70D2A2FBE4C00347729 /* Bishop.cpp */,
 				C373E70C2A2FBE3700347729 /* Bishop.h */,
+				C373E7122A30363F00347729 /* Pawn.cpp */,
+				C373E7132A30363F00347729 /* Pawn.h */,
 			);
 			path = "CIS-17A_Final";
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				C373E70F2A2FBE4C00347729 /* Bishop.cpp in Sources */,
 				C373E70B2A2D3A3F00347729 /* ChessBoard.cpp in Sources */,
 				C373E7112A2FBEB700347729 /* ChessPiece.cpp in Sources */,
+				C373E7142A30363F00347729 /* Pawn.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
