@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C373E7032A2D2B6C00347729 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E7022A2D2B6C00347729 /* main.cpp */; };
 		C373E70B2A2D3A3F00347729 /* ChessBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E7092A2D3A3F00347729 /* ChessBoard.cpp */; };
+		C373E70F2A2FBE4C00347729 /* Bishop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E70D2A2FBE4C00347729 /* Bishop.cpp */; };
+		C373E7112A2FBEB700347729 /* ChessPiece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C373E7102A2FBEB700347729 /* ChessPiece.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,9 @@
 		C373E7022A2D2B6C00347729 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C373E7092A2D3A3F00347729 /* ChessBoard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChessBoard.cpp; sourceTree = "<group>"; };
 		C373E70A2A2D3A3F00347729 /* ChessBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessBoard.h; sourceTree = "<group>"; };
+		C373E70C2A2FBE3700347729 /* Bishop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bishop.h; sourceTree = "<group>"; };
+		C373E70D2A2FBE4C00347729 /* Bishop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bishop.cpp; sourceTree = "<group>"; };
+		C373E7102A2FBEB700347729 /* ChessPiece.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChessPiece.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +67,10 @@
 			children = (
 				C373E7022A2D2B6C00347729 /* main.cpp */,
 				C373E7092A2D3A3F00347729 /* ChessBoard.cpp */,
+				C373E7102A2FBEB700347729 /* ChessPiece.cpp */,
 				C373E70A2A2D3A3F00347729 /* ChessBoard.h */,
+				C373E70D2A2FBE4C00347729 /* Bishop.cpp */,
+				C373E70C2A2FBE3700347729 /* Bishop.h */,
 			);
 			path = "CIS-17A_Final";
 			sourceTree = "<group>";
@@ -125,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C373E7032A2D2B6C00347729 /* main.cpp in Sources */,
+				C373E70F2A2FBE4C00347729 /* Bishop.cpp in Sources */,
 				C373E70B2A2D3A3F00347729 /* ChessBoard.cpp in Sources */,
+				C373E7112A2FBEB700347729 /* ChessPiece.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

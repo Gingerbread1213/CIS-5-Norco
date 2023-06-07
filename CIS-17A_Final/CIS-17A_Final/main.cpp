@@ -6,21 +6,18 @@ using namespace std;
 
 
 
-
-
 int main(){
     
-    for(int i=0; i<8; i++){
-        
-        for(int j=0;j<8;j++){
-                
-            
-            
-        }
-        
-    }
+    int row=1;
+    int col=2;
     
+    string pos;
+    pos = col+'a';
+    pos = pos+to_string(row+1) ;
+
     
+    cout << pos << endl;
+    cout << 1+'a';
     
     return 0;
 }

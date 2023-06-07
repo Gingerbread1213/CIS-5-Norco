@@ -10,68 +10,40 @@
 
 using namespace std;
 
-const int SIZE = 8;
 
-class ChessPiece;
-
-struct Position{
-  
-    int x;
-    int y;
+ChessBoard::ChessBoard(){
     
-};
-
-class ChessBoard{
     
-private:
-    ChessPiece *board[SIZE][SIZE];
-  
-public:
-    ChessBoard(); // create board
-    ~ChessBoard(); // delete board
-    
-    void initialize(); //place pieces
-    
-    ChessPiece* getPiece(Position position); // get the piece type by input position
-    
-    bool placePiece(ChessPiece* piece, Position position);
-    
-    bool move(Position fromPosition, Position toPosition);
-
-    string toString(); // debug
-    
-};
+}
 
 
+ChessBoard::~ChessBoard(){
+    
+    
+    
+}
 
-class ChessPiece{
-  
-    enum Color {WHITE, BLACK};
-    
-protected:
-    ChessBoard board;
-    int row;
-    int column;
-    Color color;
-    
-public:
-    ChessPiece(ChessBoard board, Color color); // create chess piece
-    ~ChessPiece(); // destructor
-    
-    int getRow(); // return row
-    int getColumn(); // return column
-    void setRow(); // set a row
-    void setColumn(); // set a column
-    Color getColor(); // return color
-    string getPosition();
-    void setPosition(Position position);
+void ChessBoard::initialize(){
     
     
-    virtual string toString();
-    virtual vector<string>* legalMoves();
+}
+
+ChessPiece* ChessBoard::getPiece(Position position){
     
     
-};
+    
+    return a;
+}
+
+bool ChessBoard::placePiece(ChessPiece* piece, Position position){
+    
+    return false;
+}
+
+bool ChessBoard::move(Position fromPosition, Position toPosition){
+    
+    return false;
+}
 
 
 
