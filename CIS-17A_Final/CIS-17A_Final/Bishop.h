@@ -20,8 +20,8 @@ class Bishop : public ChessPiece
 public:
     Bishop(ChessBoard* board, Color color);
     virtual ~Bishop();
-    virtual string toString();
-    virtual vector<string>* legalMoves();
+    string toString () const;
+    virtual vector<string>* legalMoves() const;
 };
 
 

@@ -16,7 +16,7 @@ King::~King(){
     
 }
 
-string King::toString(){
+string King::toString() const{
     
     if(color==BLACK){
         return "\u265A";
@@ -25,7 +25,7 @@ string King::toString(){
     }
 }
 
-vector<string>* King::legalMoves(){
+vector<string>* King::legalMoves() const{
     
     vector<string>* move = new vector<string>();
     return move;

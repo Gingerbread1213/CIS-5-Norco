@@ -6,6 +6,9 @@
 //
 
 #include "Rook.h"
+#include <iostream>
+
+using namespace std;
 
 
 Rook::Rook(ChessBoard* board, Color color) : ChessPiece(board, color)
@@ -17,7 +20,7 @@ Rook::~Rook(){
     
 }
 
-string Rook::toString(){
+string Rook::toString() const{
     
     if(color==BLACK){
         return "\u265C";
@@ -26,7 +29,7 @@ string Rook::toString(){
     }
 }
 
-vector<string>* Rook::legalMoves(){
+vector<string>* Rook::legalMoves() const{
     
     vector<string>* move = new vector<string>();
     int n_col = column;
@@ -38,69 +41,69 @@ vector<string>* Rook::legalMoves(){
     if(color==BLACK){
         
         // front
-        
         while(n_row>0){
             n_pos.row=n_row-1;
             if(board->getPiece(n_pos) == NULL){
                 n_row-=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
             }else{
                 n_row-=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
                 n_row = 0;
             }
         }
         
-        n_pos.row=n_row;
+        n_pos.row=row;
+        n_row = row;
         
         // back
         
-        while(n_row<8){
+        while(n_row<7){
             n_pos.row=n_row+1;
             if(board->getPiece(n_pos) == NULL){
                 n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
             }else{
                 n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
-                n_row = 8;
+                move->push_back(getPosition(n_col,n_row));
+                n_row = 7;
             }
         }
         
-        n_pos.row=n_row;
-        
+        n_pos.row=row;
+        n_row = row;
         // left
         
         while(n_col>0){
             n_pos.column=n_col-1;
             if(board->getPiece(n_pos) == NULL){
                 n_col-=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
             }else{
                 n_col-=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
                 n_col = 0;
             }
         }
         
-        n_pos.column=n_col;
-        
+        n_pos.column=column;
+        n_col = column;
         // right
         
-        while(n_col<8){
+        while(n_col<7){
             n_pos.column=n_col+1;
             if(board->getPiece(n_pos) == NULL){
                 n_col+=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
             }else{
                 n_col+=1;
-                move->push_back(toCoorString(n_col,n_row));
-                n_col = 8;
+                move->push_back(getPosition(n_col,n_row));
+                n_col = 7;
             }
         }
         
-        n_pos.column=n_col;
-        
+        n_pos.column=column;
+        n_col = column;
     }
     
     

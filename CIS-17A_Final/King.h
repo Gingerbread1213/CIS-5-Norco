@@ -22,8 +22,8 @@ class King : public ChessPiece
 public:
     King(ChessBoard* board, Color color);
     virtual ~King();
-    virtual string toString();
-    virtual vector<string>* legalMoves();
+    string toString() const;
+    virtual vector<string>* legalMoves() const;
 };
 
 #endif /* King_hpp */

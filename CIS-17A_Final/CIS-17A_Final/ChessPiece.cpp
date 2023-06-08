@@ -20,9 +20,6 @@ ChessPiece::ChessPiece(ChessBoard *board, Color color){
     
 }
 
-ChessPiece::~ChessPiece(){
-    
-}
 
 
 int ChessPiece::getRow(){
@@ -47,19 +44,28 @@ Color ChessPiece::getColor(){
     return color;
 }
 
-string ChessPiece::getPosition(){
-    return toCoorString(column, row);
-}
-
-
-string ChessPiece::toCoorString(int n_col, int n_row){
+string ChessPiece::getPosition() const{
     
     string pos;
-    pos = n_col+'a';
-    pos = pos+to_string(n_row+1);
+    pos = column+'a';
+    pos = pos+to_string(row+1);
+    
     
     return pos;
 }
+
+string ChessPiece::getPosition(int col, int row) const{
+    
+    string pos;
+    pos = col+'a';
+    pos = pos+to_string(row+1);
+    
+    
+    return pos;
+}
+
+
+
 
 void ChessPiece::setPosition(Position position){
     

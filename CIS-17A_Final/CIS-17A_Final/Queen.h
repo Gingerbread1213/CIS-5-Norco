@@ -21,8 +21,8 @@ class Queen : public ChessPiece
 public:
     Queen(ChessBoard* board, Color color);
     virtual ~Queen();
-    virtual string toString();
-    virtual vector<string>* legalMoves();
+    string toString () const;
+    virtual vector<string>* legalMoves() const;
 };
 
 

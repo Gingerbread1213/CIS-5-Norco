@@ -19,8 +19,8 @@ class Pawn : public ChessPiece
 public:
     Pawn(ChessBoard* board, Color color);
     virtual ~Pawn();
-    virtual string toString();
-    virtual vector<string>* legalMoves();
+    string toString() const;
+    virtual vector<string>* legalMoves() const;
 };
 
 #endif /* Pawn_hpp */

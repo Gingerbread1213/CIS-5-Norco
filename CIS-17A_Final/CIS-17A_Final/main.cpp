@@ -10,17 +10,20 @@ int ok();
 
 int main(){
     
-    int *a[3][3];
-    
-    int x = 1;
-    
-    
-    a[0][0]=&x;
-    
-    cout << *a[0][0] <<endl;
-    
-    x = 2;
-    cout << *a[0][0] <<endl;
+
+    ChessBoard board;
+    board.printBoard();
+    board.initialize();
+    board.printBoard();
+    board.move("e7", "e6");
+    board.printBoard();
+    board.move("f8", "c5");
+    board.printBoard();
+    board.move("c5", "d6");
+    board.printBoard();
+    board.move("d6", "h2");
+
+    board.printBoard();
     
     
     

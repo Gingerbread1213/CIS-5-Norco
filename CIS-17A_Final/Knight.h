@@ -21,8 +21,8 @@ class Knight : public ChessPiece
 public:
     Knight(ChessBoard* board, Color color);
     virtual ~Knight();
-    virtual string toString();
-    virtual vector<string>* legalMoves();
+    string toString() const;
+    virtual vector<string>* legalMoves() const;
 };
 
 #endif /* Knight_hpp */

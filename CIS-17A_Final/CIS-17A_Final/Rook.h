@@ -19,8 +19,8 @@ class Rook : public ChessPiece
 public:
     Rook(ChessBoard* board, Color color);
     virtual ~Rook();
-    virtual string toString();
-    virtual vector<string>* legalMoves();
+    string toString() const;
+    vector<string>* legalMoves() const;
 };
 
 #endif /* Rook_hpp */

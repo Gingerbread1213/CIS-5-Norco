@@ -16,7 +16,7 @@ Knight::~Knight(){
     
 }
 
-string Knight::toString(){
+string Knight::toString() const{
     
     if(color==BLACK){
         return "\u265E";
@@ -25,7 +25,7 @@ string Knight::toString(){
     }
 }
 
-vector<string>* Knight::legalMoves(){
+vector<string>* Knight::legalMoves() const{
     
     vector<string>* move = new vector<string>();
     return move;

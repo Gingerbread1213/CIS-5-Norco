@@ -16,7 +16,7 @@ Bishop::~Bishop(){
     
 }
 
-string Bishop::toString(){
+string Bishop::toString() const{
     
     if(color==BLACK){
         return "\u265D";
@@ -26,7 +26,7 @@ string Bishop::toString(){
 
 }
 
-vector<string>* Bishop::legalMoves(){
+vector<string>* Bishop::legalMoves() const{
     
     vector<string>* move = new vector<string>();
     int n_row = row;
@@ -45,11 +45,11 @@ vector<string>* Bishop::legalMoves(){
             if(board->getPiece(n_pos) == NULL){
                 n_col-=1;
                 n_row-=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
             }else{
                 n_col-=1;
                 n_row-=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
                 n_col=0;
                 n_row=0;
             }
@@ -57,6 +57,8 @@ vector<string>* Bishop::legalMoves(){
         
         n_row = row;
         n_col = column;
+        n_pos.row=row;
+        n_pos.column=column;
                
         // go right down
         
@@ -68,15 +70,20 @@ vector<string>* Bishop::legalMoves(){
             if(board->getPiece(n_pos) == NULL){
                 n_col+=1;
                 n_row-=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
             }else{
                 n_col+=1;
                 n_row-=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
                 n_col= 8;
                 n_row= 0;
             }
         }
+        
+        n_row = row;
+        n_col = column;
+        n_pos.row=row;
+        n_pos.column=column;
         
         // go left up
         
@@ -89,15 +96,20 @@ vector<string>* Bishop::legalMoves(){
             if(board->getPiece(n_pos) == NULL){
                 n_col-=1;
                 n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
             }else{
                 n_col-=1;
                 n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
                 n_col= 0;
                 n_row= 8;
             }
         }
+        
+        n_row = row;
+        n_col = column;
+        n_pos.row=row;
+        n_pos.column=column;
         
         // go right up
         
@@ -109,15 +121,21 @@ vector<string>* Bishop::legalMoves(){
             if(board->getPiece(n_pos) == NULL){
                 n_col+=1;
                 n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
             }else{
                 n_col+=1;
                 n_row+=1;
-                move->push_back(toCoorString(n_col,n_row));
+                move->push_back(getPosition(n_col,n_row));
                 n_col= 8;
                 n_row= 8;
             }
         }
+        
+        n_row = row;
+        n_col = column;
+        n_pos.row=row;
+        n_pos.column=column;
+        
     }
     
     if (color==WHITE){

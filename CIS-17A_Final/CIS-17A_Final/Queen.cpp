@@ -16,7 +16,7 @@ Queen::~Queen(){
     
 }
 
-string Queen::toString(){
+string Queen::toString() const{
     
     if(color==BLACK){
         return "\u265B";
@@ -25,7 +25,7 @@ string Queen::toString(){
     }
 }
 
-vector<string>* Queen::legalMoves(){
+vector<string>* Queen::legalMoves() const{
     
     vector<string>* move = new vector<string>();
     return move;

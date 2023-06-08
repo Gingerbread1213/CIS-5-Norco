@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -41,14 +42,17 @@ public:
     
     void initialize(); //place pieces
     
+    void printBoard();
+    
     ChessPiece* getPiece(Position position); // get the piece type by input position
     
     bool placePiece(ChessPiece* piece, Position position);
     
-    bool move(Position fromPosition, Position toPosition);
+    bool move(string from, string to);
 
     string toString(); // debug
     
+
     
 };
 
@@ -68,15 +72,18 @@ protected:
 public:
     
     ChessPiece(ChessBoard* board, Color color); // create chess piece
-    ~ChessPiece();
+    virtual ~ChessPiece(){};
     int getRow(); // return row
     int getColumn(); // return column
     void setRow(int newRow); // set a row
     void setColumn(int newCol); // set a column
     Color getColor(); // return color
-    string getPosition();
+    string getPosition() const;
+    string getPosition(int col, int row) const;
     void setPosition(Position position);
-    virtual string toCoorString(int n_col, int n_row);
+    virtual string toString() const = 0;
+    virtual vector<string>* legalMoves() const=0;
+    
 };
 
 

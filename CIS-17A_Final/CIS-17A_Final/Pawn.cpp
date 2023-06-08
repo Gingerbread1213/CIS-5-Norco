@@ -19,7 +19,7 @@ Pawn::~Pawn(){
     
 }
 
-string Pawn::toString(){
+string Pawn::toString() const{
     
     if(color==BLACK){
         return "\u265F";
@@ -29,7 +29,7 @@ string Pawn::toString(){
 
 }
 
-vector<string>* Pawn::legalMoves(){
+vector<string>* Pawn::legalMoves() const{
     
     vector<string>* move = new vector<string>();
     int n_col = column;
@@ -41,21 +41,21 @@ vector<string>* Pawn::legalMoves(){
     if(color==BLACK){
         n_pos.row=n_row-1;
         if(board->getPiece(n_pos) == NULL){
-            move->push_back(toCoorString(n_col,n_row-1));
+            move->push_back(getPosition(n_col,n_row-1));
         }
         n_pos.row=n_row-2;
         if(board->getPiece(n_pos) == NULL && n_row==6){
-            move->push_back(toCoorString(n_col,n_row-2));
+            move->push_back(getPosition(n_col,n_row-2));
         }
         n_pos.row=n_row-1;
         n_pos.column=n_col+1;
         if(board->getPiece(n_pos)!= NULL){
-            move->push_back(toCoorString(n_col+1,n_row-1));
+            move->push_back(getPosition(n_col+1,n_row-1));
         }
         n_pos.row=n_row-1;
         n_pos.column=n_col-1;
         if(board->getPiece(n_pos)!=NULL){
-            move->push_back(toCoorString(n_col-1,n_row-1));
+            move->push_back(getPosition(n_col-1,n_row-1));
         }
     }
     
